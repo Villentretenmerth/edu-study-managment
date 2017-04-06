@@ -4,7 +4,7 @@
 		Hi, here's my App to University. Subject is complicated, and whole app is in Polish, but you can see how i use Sinatra, Angular and Heroku. 
 	</dd>
 	<dd>
-		btw. Don't look at permission module, its not finish yet. (definitely dont try to make it like this! If You want make good users role module, You have to check all action on backend side) 
+		Btw. Don't look at permission module, its not finish yet. (definitely dont try to make it like this! If You want make good users role module, You have to check all action on backend side)
 	</dd>
 
 * My app can be found at https://edu-study-managment.herokuapp.com/
