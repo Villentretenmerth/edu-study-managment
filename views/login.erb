@@ -1,0 +1,37 @@
+<div class="content--center" style="margin-top:50px;">
+
+
+	<img src="http://www.grabowskamodels.pl/images/partnerzy/wsiz.png" width="150" height="150">
+
+
+</div>
+<div class="content--center" style="margin-top:10px;">
+	<form>
+		
+		<div class="content--center" style="margin-top:50px;">
+			<div class="settings__row"> 
+				id: 
+			</div>
+			<div class="settings__row"> 
+				<input type="text" ng-model="authentication.username"> 
+			</div>
+		</div>
+		
+		<div class="content--center">
+			<div class="settings__row"> 
+				password:
+			</div>
+			<div class="settings__row"> 
+				<input type="password" ng-model="authentication.password">
+			</div>
+		</div>
+
+		<div class="content--center">
+			<div class="settings__row" style="width:400px;"> 
+				<input type="button" ng-click="authentication.login()" value="login">
+			</div>
+		</div>
+	</form>
+
+
+</div>

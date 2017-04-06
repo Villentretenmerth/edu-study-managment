@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html ng-app="Edu" ng-controller="MainController" ng-init="init()">
+
+  <head>
+
+    <title> edukacyjny </title>
+
+    <meta charset="utf-8">
+    <meta name="description" content="Description">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+
+    <link id="style" rel="stylesheet" property="stylesheet" ng-href="css/style/default.css">
+
+      <link rel="stylesheet" property="stylesheet" href="css/app.css">
+
+
+  </head>
+
+  <body>
+
+    <%= yield %>
+
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-ui-router.js"></script>
+    <script src="js/angular-sanitize.min.js"></script>
+
+      <script src="js/app.js"></script>
+
+      <script src="js/controllers/login.controller.js"></script>
+      <script src="js/controllers/main.controller.js"></script>
+      <script src="js/controllers/top-menu.controller.js"></script>
+      <script src="js/controllers/main-view.controller.js"></script>
+      <script src="js/controllers/frames.controller.js"></script>
+      <script src="js/controllers/correction.controller.js"></script>
+      <script src="js/controllers/settings.controller.js"></script>
+      <script src="js/controllers/add-new-modules.controller.js"></script>
+      <script src="js/controllers/add-new-user.controller.js"></script>
+      <script src="js/controllers/my-programs.controller.js"></script>
+      <script src="js/controllers/manage-accounts.controler.js"></script>
+      
+
+      <script src="js/services/authentication.services.js"></script>
+      <script src="js/services/modules.services.js"></script>
+
+
+
+    <script src="js/addons/swipe.min.js"></script>
+  </body>
+
+</html>

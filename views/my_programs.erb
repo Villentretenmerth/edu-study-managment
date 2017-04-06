@@ -1,0 +1,72 @@
+<!-- <div> -->
+<!-- My Programs -->
+<!-- </div> -->
+
+<div class="settings">
+<div class="content--center" style="margin-bottom:3px;">
+	<div class="settings__row"> 
+			Rocznik:
+	</div>
+		<div class="settings__row"> 
+			Semestr:
+	</div>
+		<div class="settings__row"> 
+			L. Ćwiczeń:
+	</div>
+		<div class="settings__row"> 
+			L. Wykładów:
+	</div>
+		<div class="settings__row"> 
+			L. Konsultacji:
+	</div>
+			<div class="settings__row"> 
+			Nazwa modułu:
+	</div>
+</div>
+	
+	<div ng-repeat="program in allMyPrograms">
+		<div ng-click="pickProgram(program)">
+		<div class="content--center" style="margin-bottom:3px; cursor: pointer;">
+			<div class="settings__row"> 
+				{{program.rocznik}}
+			</div>
+			<div class="settings__row" style=""> 
+				{{program.semestr}}
+			</div>
+			<div class="settings__row" style=""> 
+			{{program.count_lecture}}
+			</div>
+			<div class="settings__row" style=""> 
+			{{program.count_exercise}}
+			</div>
+			<div class="settings__row" style=""> 
+			{{program.count_consultation}}
+			</div>
+			<div class="settings__row" style=""> 
+				{{program.modul}}
+			</div>
+			<!-- <div class="settings__row" style=""> 
+			</div> -->
+		</div>
+			<!-- <div >{{program.rocznik}}</div>
+			<div>{{program.semestr}}</div>
+			<div>{{program.cout_lecture}}</div>
+			<div>{{program.count_exercise}}</div>
+			<div>{{program.count_consltation}}</div>
+			<div>{{program.modul}}</div> -->
+		</div>
+	</div>
+</div>
+<!-- {"id":"7","semestr":"Semestr 1","count_lecture":"9","count_exercise":"10","count_consultation":"9","rocznik":"2013","modul":null} -->
+<div ng-show="pickedProgram != null" class="content--center">
+
+	Liczba godzin wykładów:
+		<select ng-model="pickedProgram.count_lecture" ng-options="leading for leading in ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15']"></select>
+	Liczba godzin ćwiczeń:
+		<select ng-model="pickedProgram.count_exercise" ng-options="leading for leading in ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15']"></select>
+	Liczba godzin konsultacji:
+		<select ng-model="pickedProgram.count_consultation" ng-options="leading for leading in ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15']"></select>
+
+		<input type="button" value="zapisz" ng-click="sendProgramHours()"></>
+ 
+</div>

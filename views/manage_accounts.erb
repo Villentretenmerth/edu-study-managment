@@ -1,0 +1,35 @@
+
+<div class="settings">
+	<div class="content--center" style="margin-bottom:3px;">
+		<div class="settings__row"> 
+				Imie:
+		</div>
+			<div class="settings__row"> 
+				Nazwisko:
+		</div>
+			<div class="settings__row"> 
+				Zmiana hasła:
+		</div>
+			<div class="settings__row"> 
+				
+		</div>
+			<div class="settings__row"> 
+				Usuń konto:
+		</div>
+
+	</div>
+
+
+	<div ng-repeat="account in accounts">
+	
+		<div class="content--center" style="margin-bottom:3px;">
+	
+			<div class="settings__row">{{account.name}}</div>
+			<div class="settings__row">{{account.surname}}</div>
+			<div class="settings__row"><input type="password" ng-model="account.password" style="text-align: center;"></div>
+			<div class="settings__row"><input type="button" ng-click="changePassword(account.id,account.password)" value="zmień hasło"></div>
+			<div class="settings__row"><input type="button" ng-click="deleteAccount(account.id)" value="usuń konto"></div>
+
+		</div>
+	</div>
+</div>

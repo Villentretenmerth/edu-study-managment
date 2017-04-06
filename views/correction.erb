@@ -1,0 +1,64 @@
+<!-- <div>
+	Correction
+</div> -->
+
+<div class="settings" style="height: 500px;overflow:auto;">
+
+<div class="content--center" style="margin-bottom:3px;">
+	<div class="settings__row"> 
+			Rocznik:
+	</div>
+		<div class="settings__row"> 
+			Semestr:
+	</div>
+		<div class="settings__row"> 
+			Nazwa modulu:
+	</div>
+		<div class="settings__row"> 
+			Prowadzacy
+	</div>
+		
+</div>
+
+	<div ng-repeat="all in allModules">
+		<div ng-click="goToModule(all)">
+
+<div class="content--center" style="margin-bottom:3px;cursor: pointer;">
+	<div class="settings__row"> 
+			{{all.rocznik}}
+	</div>
+		<div class="settings__row"> 
+			{{all.semestr}}
+	</div>
+		<div class="settings__row"> 
+			{{all.modul}}
+	</div>
+		<div class="settings__row"> 
+			{{all.surname}}
+	</div>
+		
+</div>
+
+
+		
+
+		</div>
+	</div>
+</div>
+
+
+<!-- <div>
+	{{module}}
+</div> -->
+
+<div ng-show="module != null" class="content--center">
+	
+	wybierz prowadzacego: 
+	
+	<select ng-model="leader" ng-options="leading as leading.surname for leading in allUsers"></select>
+	<input type="button" ng-click="saveUser()" value="wyslij">
+	<div>
+
+	</div>
+
+</div>

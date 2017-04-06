@@ -1,0 +1,143 @@
+.body {
+
+	
+}
+
+.content--center{
+	left:0; 
+	right:0;    
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-menu{
+	padding-bottom: 25px; }
+	.top-menu__button {
+		width:200px;
+		height:50px;
+		float:left;
+		display:block;
+		text-align: center;
+		line-height: 50px;
+	    background-color: cadetblue;
+	    color: white; }
+		.top-menu__button:hover {
+			cursor: pointer; }
+
+.settings {
+    width: 100%;
+    margin-bottom: 25px;
+}
+	.settings__change-password {
+		margin-bottom: 25px;
+	}
+	.settings__row {
+		width:200px;
+		height:50px;
+		float:left;
+		display:block;
+		text-align: center;
+		line-height: 50px;
+	    background-color: cadetblue;
+	    color: white;
+	}
+
+	.frames {
+
+	}
+
+	.frames__years {
+	    height: 50px;
+	    width: 150px;
+	    line-height: 50px;
+	    cursor: pointer;
+	    margin-bottom: 3px;
+	    background: gainsboro;
+	    text-align: center;
+	}
+
+	.frames__module {
+	    width: 310px;
+	    height: 40px;
+	    float: left;
+	    display: block;
+	    text-align: center;
+	    line-height: 40px;
+	    background-color: gainsboro;
+	}
+
+	.frames__row {
+		width: 350px;
+	    height: 30px;
+	    float: left;
+	    display: block;
+	    text-align: center;
+	    line-height: 30px;
+	    background-color: cadetblue;
+	    color: white;
+        clear: both;
+        margin-bottom:2px;
+	}
+
+/*.content--center{
+	left:0; 
+	right:0;    
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+} */
+
+/*.settings__row {
+	width:200px;
+	height:50px;
+	float:left;
+	display:block;
+	text-align: center;
+	line-height: 50px;
+    background-color: cadetblue;
+    color: white;
+}*/
+
+	.red {
+		background-color: red;
+		width: 40px;
+	    height: 40px;
+	    float: left;
+	    display: block;
+	    text-align: center;
+	    line-height: 30px;
+	    color: white;
+        clear: both;
+        margin-bottom:2px;
+	}
+	.green {
+		background-color: green;
+		width: 40px;
+	    height: 40px;
+	    float: left;
+	    display: block;
+	    text-align: center;
+	    line-height: 30px;
+	    color: white;
+        clear: both;
+        margin-bottom:2px;
+	}
+	.blue {
+		background-color: blue;
+		width: 40px;
+	    height: 40px;
+	    float: left;
+	    display: block;
+	    text-align: center;
+	    line-height: 30px;
+	    color: white;
+        clear: both;
+        margin-bottom:2px;	}
+		

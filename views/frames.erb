@@ -1,0 +1,123 @@
+
+<div class="content--center">
+	<!-- <div> -->
+		<!-- Frames -->
+	<!-- </div> -->
+
+	<div style="width: 300px;height:450px;">
+		<div style="height: 400px;overflow: auto">
+			<div> Wybierz Rocznik: </div>
+			<div ng-repeat="year in years">
+				<div ng-bind="year.nazwa" ng-click="showYear(year)" class="frames__years"></div>
+			</div>
+		</div>
+
+
+		<div>
+			<div>Nowy Rocznik:</div>
+			<input type="text" ng-model="newYear"></input>
+			<input type="button" ng-click="sendNewYear()" value="Dodaj"></input>
+		</div>
+	</div>
+
+
+	<div style="width: 50%;height:450px;">
+		<div style="height: 400px;overflow: auto">
+
+		<div>Wybrany rocznik:</div>
+				
+				<div> <div class="frames__row"> SEM I</div>
+					<div ng-repeat="picked in pickedModulesInYear" style="clear:both; display: flex;">
+						<div ng-class="{'red': picked.kolory_modulow_id == '1', 
+										'green': picked.kolory_modulow_id == '2', 
+										'blue': picked.kolory_modulow_id == '3'}" ng-if="picked.lista_semestrow_id == '1'">					
+						</div>
+						<div ng-if="picked.lista_semestrow_id == '1'" class="frames__module" >{{picked.nazwa}}</div>
+					</div>
+				</div>
+
+				
+								<div> <div class="frames__row"> SEM II</div>
+					<div ng-repeat="picked in pickedModulesInYear" style="clear:both; display: flex;">
+						<div ng-class="{'red': picked.kolory_modulow_id == '1', 
+										'green': picked.kolory_modulow_id == '2', 
+										'blue': picked.kolory_modulow_id == '3'}" ng-if="picked.lista_semestrow_id == '2'">					
+						</div>
+						<div ng-if="picked.lista_semestrow_id == '2'" class="frames__module" >{{picked.nazwa}}</div>
+					</div>
+				</div>
+
+							<div> <div class="frames__row"> SEM III</div>
+					<div ng-repeat="picked in pickedModulesInYear" style="clear:both; display: flex;">
+						<div ng-class="{'red': picked.kolory_modulow_id == '1', 
+										'green': picked.kolory_modulow_id == '2', 
+										'blue': picked.kolory_modulow_id == '3'}" ng-if="picked.lista_semestrow_id == '3'">					
+						</div>
+						<div ng-if="picked.lista_semestrow_id == '3'" class="frames__module" >{{picked.nazwa}}</div>
+					</div>
+				</div>
+
+								<div> <div class="frames__row"> SEM IV</div>
+					<div ng-repeat="picked in pickedModulesInYear" style="clear:both; display: flex;">
+						<div ng-class="{'red': picked.kolory_modulow_id == '1', 
+										'green': picked.kolory_modulow_id == '2', 
+										'blue': picked.kolory_modulow_id == '3'}" ng-if="picked.lista_semestrow_id == '4'">					
+						</div>
+						<div ng-if="picked.lista_semestrow_id == '4'" class="frames__module" >{{picked.nazwa}}</div>
+					</div>
+				</div>
+
+				
+								<div> <div class="frames__row"> SEM V</div>
+					<div ng-repeat="picked in pickedModulesInYear" style="clear:both; display: flex;">
+						<div ng-class="{'red': picked.kolory_modulow_id == '1', 
+										'green': picked.kolory_modulow_id == '2', 
+										'blue': picked.kolory_modulow_id == '3'}" ng-if="picked.lista_semestrow_id == '4'">					
+						</div>
+						<div ng-if="picked.lista_semestrow_id == '5'" class="frames__module" >{{picked.nazwa}}</div>
+					</div>
+				</div>
+
+				
+								<div> <div class="frames__row"> SEM VI</div>
+					<div ng-repeat="picked in pickedModulesInYear" style="clear:both; display: flex;">
+						<div ng-class="{'red': picked.kolory_modulow_id == '1', 
+										'green': picked.kolory_modulow_id == '2', 
+										'blue': picked.kolory_modulow_id == '3'}" ng-if="picked.lista_semestrow_id == '6'">					
+						</div>
+						<div ng-if="picked.lista_semestrow_id == '6'" class="frames__module" >{{picked.nazwa}}</div>
+					</div>
+				</div>
+
+				
+								<div> <div class="frames__row"> SEM VII</div>
+					<div ng-repeat="picked in pickedModulesInYear" style="clear:both; display: flex;">
+						<div ng-class="{'red': picked.kolory_modulow_id == '1', 
+										'green': picked.kolory_modulow_id == '2', 
+										'blue': picked.kolory_modulow_id == '3'}" ng-if="picked.lista_semestrow_id == '7'">					
+						</div>
+						<div ng-if="picked.lista_semestrow_id == '7'" class="frames__module" >{{picked.nazwa}}</div>
+					</div>
+				</div>
+
+		</div>
+
+
+					
+		Dodaj wybrany modul:
+		<div>
+			<select ng-model="color" style="float: left;" ng-options="color as color.name for color in colorModules"></select>
+			<select ng-model="semester"  style="float: left;" ng-options="semester as semester.name for semester in semestersList"></select>
+			<div ng-show="color != null" style="float: left; min-width: 100px;"> 
+				<select  style="min-width: 100px;"
+				ng-model="selectedDevice" 
+				ng-options="modul as modul.nazwa for modul in allModules | filter:{kolory_modulow_id: color.id}">
+				<option></option>
+				</select>
+			</div>
+			<input type="button" ng-click="send_module()" value="zapisz">
+		</div>
+	
+	</div>
+
+</div>

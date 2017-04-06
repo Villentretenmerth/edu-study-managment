@@ -1,0 +1,87 @@
+<div class="content--center">
+
+
+	<div class="settings">
+		
+		<div class="content--center">
+			<div class="settings__row" style="width:400px;"> 
+				zmiana hasła:
+			</div>
+		</div>
+		
+		<div class="content--center">
+			<div class="settings__row"> 
+				podaj hasło: 
+			</div>
+			<div class="settings__row" style=""> 
+				<input type="password" ng-model="password"> 
+			</div>
+		</div>
+		
+		<div class="content--center">
+			<div class="settings__row" style=""> 
+			potwierdz hasło: 
+			</div> 
+			<div class="settings__row" style=""> 
+				<input  type="password" ng-model="passwordReType"> 
+			</div>
+		</div>
+
+		<div class="content--center">
+			<div class="settings__row"  style="width:400px;">
+				<input type="button" ng-click="changePassword()" value="Wyślij">
+			</div>
+		</div>
+
+	</div>
+
+	<div class="settings">
+		
+		<div class="content--center">
+			<div class="settings__row" style="width:400px;"> 
+				zmiana email:
+			</div>
+		</div>
+		
+		<div class="content--center">
+			<div class="settings__row">
+				podaj email: 
+			</div>
+			<div class="settings__row"> 
+				<input type="text" ng-model="email"> 
+			</div>
+		</div>
+
+		<div class="content--center">
+			<div class="settings__row"  style="width:400px;">
+				<input type="button" ng-click="changeEmail()" value="Wyślij">
+			</div>
+		</div>
+
+	</div>
+
+	<div class="settings" ng-if="authentication.permission == 2 || authentication.permission == 3">
+		<div class="content--center">
+			<div class="settings__row" style="width:400px;"> 
+				<input type="button" value="Dodaj Moduły" ng-click="menage_modules()">
+			</div>
+		</div>
+	</div>
+
+	<div class="settings" ng-if="authentication.permission == 2 || authentication.permission == 3">
+		<div class="content--center" >
+			<div class="settings__row" style="width:400px;"> 
+				<input type="button" value="Dodaj nowego użytkownika" ng-click="menage_users()">
+			</div>
+		</div>
+	</div>
+
+	<div class="settings" ng-if="authentication.permission == 3">
+		<div class="content--center">
+			<div class="settings__row" style="width:400px;"> 
+				<input type="button" value="Zarządzaj kontami" ng-click="menage_accounts()">
+			</div>
+		</div>
+	</div>
+
+</div>

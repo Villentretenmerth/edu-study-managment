@@ -1,0 +1,10 @@
+<div class="content--center top-menu">
+	<div ng-click="goHome()" class="top-menu__button">HOME</div>
+	<div ng-click="goFrames()" class="top-menu__button" 
+	ng-if="authentication.permission == 2 || authentication.permission == 3">RAMY KWALIFIKACJI</div>
+	<div ng-click="goMyPrograms()" class="top-menu__button">KOREKTY PROGRAMÓW</div>
+	<div ng-click="goCorrection()" class="top-menu__button"
+	ng-if="authentication.permission == 2 || authentication.permission == 3">PROWADZĄCY</div>
+	<div ng-click="goSettings()" class="top-menu__button">USTAWIENIA</div>
+	<div ng-click="logout()" class="top-menu__button">WYLOGOUJ</div>
+</div>
