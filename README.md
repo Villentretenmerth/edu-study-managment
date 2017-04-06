@@ -1,4 +1,6 @@
-# Hi, here's my App to University. Subject is complicated, and whole app is in Polish, but you can see how i use Sinatra, Angular and Heroku. 
+# Sinatra-Angular App on Heroku
+
+Hi, here's my App to University. Subject is complicated, and whole app is in Polish, but you can see how i use Sinatra, Angular and Heroku. 
 
 My app can be found at https://edu-study-managment.herokuapp.com/
 
