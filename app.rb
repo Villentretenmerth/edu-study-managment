@@ -314,7 +314,7 @@ class App < Sinatra::Base
     content_type :json
 
     session.clear
-
+    redirect '/'
   end
 
 
